@@ -1,0 +1,37 @@
+application.tests package
+=========================
+
+Submodules
+----------
+
+application.tests.test\_acceptance module
+-----------------------------------------
+
+.. automodule:: application.tests.test_acceptance
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.tests.test\_additional module
+-----------------------------------------
+
+.. automodule:: application.tests.test_additional
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.tests.test\_base module
+-----------------------------------
+
+.. automodule:: application.tests.test_base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: application.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,32 @@
+application package
+===================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   application.api
+   application.models
+   application.tests
+   application.utils
+
+Submodules
+----------
+
+application.main module
+-----------------------
+
+.. automodule:: application.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: application
+   :members:
+   :undoc-members:
+   :show-inheritance:

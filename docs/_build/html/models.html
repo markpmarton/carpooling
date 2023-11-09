@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>models package &mdash; Car-pooling service  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests package" href="tests.html" />
+    <link rel="prev" title="main module" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Car-pooling service
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api.html">api package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">models package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-models.constants">models.constants module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#models.constants.ExceptionMessages"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.constants.StaticParams"><code class="docutils literal notranslate"><span class="pre">StaticParams</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-models.data">models.data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#models.data.Car"><code class="docutils literal notranslate"><span class="pre">Car</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.data.Journey"><code class="docutils literal notranslate"><span class="pre">Journey</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-models.dto">models.dto module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.BaseDTO"><code class="docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.DropOffDTO"><code class="docutils literal notranslate"><span class="pre">DropOffDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.LocateDTO"><code class="docutils literal notranslate"><span class="pre">LocateDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.LocateResponseDTO"><code class="docutils literal notranslate"><span class="pre">LocateResponseDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.RegisterCarItemDTO"><code class="docutils literal notranslate"><span class="pre">RegisterCarItemDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.RegisterCarsDTO"><code class="docutils literal notranslate"><span class="pre">RegisterCarsDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.dto.RegisterJourneyDTO"><code class="docutils literal notranslate"><span class="pre">RegisterJourneyDTO</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-models.exceptions">models.exceptions module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.BaseException"><code class="docutils literal notranslate"><span class="pre">BaseException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.CarNotFoundException"><code class="docutils literal notranslate"><span class="pre">CarNotFoundException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.DataValidatorException"><code class="docutils literal notranslate"><span class="pre">DataValidatorException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.DomainObjectAlreadyRegisteredException"><code class="docutils literal notranslate"><span class="pre">DomainObjectAlreadyRegisteredException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.EmptyCarListException"><code class="docutils literal notranslate"><span class="pre">EmptyCarListException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.InvalidCarSeatsParameterException"><code class="docutils literal notranslate"><span class="pre">InvalidCarSeatsParameterException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.InvalidPassangerNumberParameterException"><code class="docutils literal notranslate"><span class="pre">InvalidPassangerNumberParameterException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#models.exceptions.JourneyNotFoundException"><code class="docutils literal notranslate"><span class="pre">JourneyNotFoundException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Car-pooling service</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">application</a></li>
+      <li class="breadcrumb-item active">models package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="models-package">
+<h1>models package<a class="headerlink" href="#models-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-models.constants">
+<span id="models-constants-module"></span><h2>models.constants module<a class="headerlink" href="#module-models.constants" title="Link to this heading"></a></h2>
+<p>Contains the error messages and the BI specific static values.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.constants.</span></span><span class="sig-name descname"><span class="pre">ExceptionMessages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/constants.html#ExceptionMessages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.constants.ExceptionMessages" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.CarAlreadyExists">
+<span class="sig-name descname"><span class="pre">CarAlreadyExists</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Car</span> <span class="pre">with</span> <span class="pre">id</span> <span class="pre">%s</span> <span class="pre">already</span> <span class="pre">exists.'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.CarAlreadyExists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.CarForJourneyNotFound">
+<span class="sig-name descname"><span class="pre">CarForJourneyNotFound</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Car</span> <span class="pre">for</span> <span class="pre">journey</span> <span class="pre">with</span> <span class="pre">id:</span> <span class="pre">%s</span> <span class="pre">not</span> <span class="pre">found'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.CarForJourneyNotFound" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.CarNotFound">
+<span class="sig-name descname"><span class="pre">CarNotFound</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Car</span> <span class="pre">with</span> <span class="pre">id:</span> <span class="pre">%s</span> <span class="pre">not</span> <span class="pre">found'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.CarNotFound" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.InvalidNumberOfSeats">
+<span class="sig-name descname"><span class="pre">InvalidNumberOfSeats</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Car</span> <span class="pre">can</span> <span class="pre">only</span> <span class="pre">have</span> <span class="pre">4,</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">6</span> <span class="pre">seats'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.InvalidNumberOfSeats" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.JourneyIdAlreadyExists">
+<span class="sig-name descname"><span class="pre">JourneyIdAlreadyExists</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Journey</span> <span class="pre">with</span> <span class="pre">id</span> <span class="pre">%s</span> <span class="pre">already</span> <span class="pre">exists'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.JourneyIdAlreadyExists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.JourneyNotFound">
+<span class="sig-name descname"><span class="pre">JourneyNotFound</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Journey</span> <span class="pre">with</span> <span class="pre">id:</span> <span class="pre">%s</span> <span class="pre">not</span> <span class="pre">found'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.JourneyNotFound" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.ExceptionMessages.NumberOfPassangersInterval">
+<span class="sig-name descname"><span class="pre">NumberOfPassangersInterval</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Journey</span> <span class="pre">can</span> <span class="pre">only</span> <span class="pre">have</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">%s</span> <span class="pre">passangers'</span></em><a class="headerlink" href="#models.constants.ExceptionMessages.NumberOfPassangersInterval" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.constants.StaticParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.constants.</span></span><span class="sig-name descname"><span class="pre">StaticParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/constants.html#StaticParams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.constants.StaticParams" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.constants.StaticParams.MAX_SEAT_NUMBER">
+<span class="sig-name descname"><span class="pre">MAX_SEAT_NUMBER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#models.constants.StaticParams.MAX_SEAT_NUMBER" title="Link to this definition"></a></dt>
+<dd><p>Only journeys with 6 or less passengers can be served.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.data">
+<span id="models-data-module"></span><h2>models.data module<a class="headerlink" href="#module-models.data" title="Link to this heading"></a></h2>
+<p>The domain object models (or data models) contain the main logic of the application.
+Through the Car and Journey models the service registers, modifies or removes the
+objects storing the parameters received from the API interface.
+The models are also responsible for storing and classification of existing domain objects.</p>
+<p>Car: represents a car with specified capacity.
+Journey: represents the group of people willing to travel by car.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.data.Car">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.data.</span></span><span class="sig-name descname"><span class="pre">Car</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Car"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Car" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>Object properties:</dt><dd><p>id: Unique identifier of the car
+max_seats: The maximum number of seats the car has
+free_seats: The number of free seats in the car</p>
+</dd>
+<dt>Static properties:</dt><dd><p>__storage: Contains the registered car objects in {car.id: Car} format
+__free_seats: Contains the registered car ids in {car.free_seats: [car_ids]} format</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Car.get_car_by_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_car_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#models.data.Car" title="models.data.Car"><span class="pre">Car</span></a></span></span><a class="reference internal" href="_modules/models/data.html#Car.get_car_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Car.get_car_by_id" title="Link to this definition"></a></dt>
+<dd><p>Returns the Car object represented by the given id, or None if no car was found.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Car.get_car_by_seats">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_car_by_seats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#models.data.Car" title="models.data.Car"><span class="pre">Car</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/models/data.html#Car.get_car_by_seats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Car.get_car_by_seats" title="Link to this definition"></a></dt>
+<dd><p>Gets a car object from the free_seats storage based on the given seats number.
+If there is no car with the required free capacity, it looks for a higher
+capacity one until it reaches the maximum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Car.lock_car_seats">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lock_car_seats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">car</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.data.Car" title="models.data.Car"><span class="pre">Car</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">locked_seats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Car.lock_car_seats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Car.lock_car_seats" title="Link to this definition"></a></dt>
+<dd><p>If a journey is getting assigned to a car, the used seats need to be locked.</p>
+<p>The car objects free_seats property is updated and will be moved to the lower
+free_seats storage.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Car.release_car_seats">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">release_car_seats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">car</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#models.data.Car" title="models.data.Car"><span class="pre">Car</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">released_seats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Car.release_car_seats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Car.release_car_seats" title="Link to this definition"></a></dt>
+<dd><p>The opposite of the lock_car_seats method. Dropped off journeys release
+previously locked seats.</p>
+<p>The car objects free_seats property is updated and will be moved to the higher
+free_seats storage.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.data.Journey">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.data.</span></span><span class="sig-name descname"><span class="pre">Journey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passangers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Journey"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Journey" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>Object properties:</dt><dd><p>id: Unique identifier of the journey
+passangers: The number of people in the journey
+car_id: The id of the car assigned to the journey</p>
+</dd>
+<dt>Static properties:</dt><dd><dl class="simple">
+<dt>__storage: Contains the registered journey objects assigned to cars in</dt><dd><p>{journey.id: Journey} format</p>
+</dd>
+<dt>__waiting_list: Contains the registered journey objects waiting to be</dt><dd><p>assigned to a car. All registered Journey objects are placed here first.
+When a car with proper capacity will be allowed, it will be updated and
+moved to __storage.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Journey.get_journey_from_storage_by_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_journey_from_storage_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Journey.get_journey_from_storage_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Journey.get_journey_from_storage_by_id" title="Link to this definition"></a></dt>
+<dd><p>Returns the Journey object represented by the given id if in __storage, or None if
+journey was not found.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Journey.get_journey_from_waiting_list_by_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_journey_from_waiting_list_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Journey.get_journey_from_waiting_list_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Journey.get_journey_from_waiting_list_by_id" title="Link to this definition"></a></dt>
+<dd><p>Returns the Journey object represented by the given id if in __waiting_list, or None if
+journey was not found.</p>
+<p>While looking for a journey by id, the service searches first in the __storage then in
+__waiting_list. If the search in __waiting_list does not return a journey, the journey
+is not in the system, a JourneyNotFoundException can be raised.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Journey.remove_journey">
+<span class="sig-name descname"><span class="pre">remove_journey</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Journey.remove_journey"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Journey.remove_journey" title="Link to this definition"></a></dt>
+<dd><p>Removes the journey from both of the storages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.data.Journey.run_waiting_list">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_waiting_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/data.html#Journey.run_waiting_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.data.Journey.run_waiting_list" title="Link to this definition"></a></dt>
+<dd><p>The method handling car assingment on journeys in __waiting_list.
+In most cases no direct call is required, with the run_waiting_list_after
+and run_waiting_list_before decorators it can be called before/after
+executing other functions.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.dto">
+<span id="models-dto-module"></span><h2>models.dto module<a class="headerlink" href="#module-models.dto" title="Link to this heading"></a></h2>
+<p>Data transfer objects are direct maps of the interface (in this case the REST Api)
+input. Each endpoint is bind to one DTO that validates the type and value of
+the input. The validation is executed by the cerberus module based on the
+validation_schema stored in the DTO model.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.BaseDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">BaseDTO</span></span><a class="reference internal" href="_modules/models/dto.html#BaseDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.BaseDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.DropOffDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">DropOffDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/dto.html#DropOffDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.DropOffDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.dto.BaseDTO" title="models.dto.BaseDTO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.DropOffDTO.ID">
+<span class="sig-name descname"><span class="pre">ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.DropOffDTO.ID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.DropOffDTO.validation_schema">
+<span class="sig-name descname"><span class="pre">validation_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ID':</span> <span class="pre">{'min':</span> <span class="pre">1,</span> <span class="pre">'required':</span> <span class="pre">True,</span> <span class="pre">'type':</span> <span class="pre">'integer'}}</span></em><a class="headerlink" href="#models.dto.DropOffDTO.validation_schema" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.LocateDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">LocateDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/dto.html#LocateDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.LocateDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.dto.BaseDTO" title="models.dto.BaseDTO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.LocateDTO.ID">
+<span class="sig-name descname"><span class="pre">ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.LocateDTO.ID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.LocateDTO.validation_schema">
+<span class="sig-name descname"><span class="pre">validation_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ID':</span> <span class="pre">{'min':</span> <span class="pre">1,</span> <span class="pre">'type':</span> <span class="pre">'integer'}}</span></em><a class="headerlink" href="#models.dto.LocateDTO.validation_schema" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.LocateResponseDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">LocateResponseDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/dto.html#LocateResponseDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.LocateResponseDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.dto.BaseDTO" title="models.dto.BaseDTO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.LocateResponseDTO.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.LocateResponseDTO.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.LocateResponseDTO.seats">
+<span class="sig-name descname"><span class="pre">seats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.LocateResponseDTO.seats" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.LocateResponseDTO.validation_schema">
+<span class="sig-name descname"><span class="pre">validation_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'id':</span> <span class="pre">{'min':</span> <span class="pre">1,</span> <span class="pre">'type':</span> <span class="pre">'integer'},</span> <span class="pre">'seats':</span> <span class="pre">{'allowed':</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">'type':</span> <span class="pre">'integer'}}</span></em><a class="headerlink" href="#models.dto.LocateResponseDTO.validation_schema" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.RegisterCarItemDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">RegisterCarItemDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/dto.html#RegisterCarItemDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.RegisterCarItemDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.dto.BaseDTO" title="models.dto.BaseDTO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterCarItemDTO.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.RegisterCarItemDTO.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterCarItemDTO.seats">
+<span class="sig-name descname"><span class="pre">seats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.RegisterCarItemDTO.seats" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterCarItemDTO.validation_schema">
+<span class="sig-name descname"><span class="pre">validation_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'id':</span> <span class="pre">{'min':</span> <span class="pre">1,</span> <span class="pre">'type':</span> <span class="pre">'integer'},</span> <span class="pre">'seats':</span> <span class="pre">{'allowed':</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">'type':</span> <span class="pre">'integer'}}</span></em><a class="headerlink" href="#models.dto.RegisterCarItemDTO.validation_schema" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.RegisterCarsDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">RegisterCarsDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/dto.html#RegisterCarsDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.RegisterCarsDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterCarsDTO.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#models.dto.RegisterCarItemDTO" title="models.dto.RegisterCarItemDTO"><span class="pre">RegisterCarItemDTO</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#models.dto.RegisterCarsDTO.data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.dto.RegisterJourneyDTO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.dto.</span></span><span class="sig-name descname"><span class="pre">RegisterJourneyDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/dto.html#RegisterJourneyDTO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.dto.RegisterJourneyDTO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.dto.BaseDTO" title="models.dto.BaseDTO"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterJourneyDTO.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.RegisterJourneyDTO.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterJourneyDTO.people">
+<span class="sig-name descname"><span class="pre">people</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#models.dto.RegisterJourneyDTO.people" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.dto.RegisterJourneyDTO.validation_schema">
+<span class="sig-name descname"><span class="pre">validation_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'id':</span> <span class="pre">{'min':</span> <span class="pre">1,</span> <span class="pre">'type':</span> <span class="pre">'integer'},</span> <span class="pre">'people':</span> <span class="pre">{'maxlength':</span> <span class="pre">6,</span> <span class="pre">'min':</span> <span class="pre">1,</span> <span class="pre">'type':</span> <span class="pre">'integer'}}</span></em><a class="headerlink" href="#models.dto.RegisterJourneyDTO.validation_schema" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.exceptions">
+<span id="models-exceptions-module"></span><h2>models.exceptions module<a class="headerlink" href="#module-models.exceptions" title="Link to this heading"></a></h2>
+<p>Model specific exceptions are raised if the exception is related to
+the stored domain data or data validation.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.BaseException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">BaseException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#BaseException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.BaseException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.CarNotFoundException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">CarNotFoundException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#CarNotFoundException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.CarNotFoundException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.DataValidatorException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">DataValidatorException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#DataValidatorException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.DataValidatorException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.DomainObjectAlreadyRegisteredException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">DomainObjectAlreadyRegisteredException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#DomainObjectAlreadyRegisteredException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.DomainObjectAlreadyRegisteredException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.EmptyCarListException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">EmptyCarListException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#EmptyCarListException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.EmptyCarListException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.InvalidCarSeatsParameterException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">InvalidCarSeatsParameterException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#InvalidCarSeatsParameterException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.InvalidCarSeatsParameterException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.InvalidPassangerNumberParameterException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">InvalidPassangerNumberParameterException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#InvalidPassangerNumberParameterException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.InvalidPassangerNumberParameterException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="models.exceptions.JourneyNotFoundException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.exceptions.</span></span><span class="sig-name descname"><span class="pre">JourneyNotFoundException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thrower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/exceptions.html#JourneyNotFoundException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.exceptions.JourneyNotFoundException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.exceptions.BaseException" title="models.exceptions.BaseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-models" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="main.html" class="btn btn-neutral float-left" title="main module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tests.html" class="btn btn-neutral float-right" title="tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mark Marton.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

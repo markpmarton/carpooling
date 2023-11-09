@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>api package &mdash; Car-pooling service  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="application" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Car-pooling service
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">application</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">api package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api.app">api.app module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.app.bind_controller"><code class="docutils literal notranslate"><span class="pre">bind_controller()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.app.bind_logger"><code class="docutils literal notranslate"><span class="pre">bind_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.app.bind_middlewares"><code class="docutils literal notranslate"><span class="pre">bind_middlewares()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.app.create_app"><code class="docutils literal notranslate"><span class="pre">create_app()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.app.get_app"><code class="docutils literal notranslate"><span class="pre">get_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api.controllers">api.controllers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.controllers.bind_controllers"><code class="docutils literal notranslate"><span class="pre">bind_controllers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api.decorators">api.decorators module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.decorators.run_waiting_list_after"><code class="docutils literal notranslate"><span class="pre">run_waiting_list_after()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.decorators.run_waiting_list_before"><code class="docutils literal notranslate"><span class="pre">run_waiting_list_before()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api.middlewares">api.middlewares module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.middlewares.ContentTypeMiddleware"><code class="docutils literal notranslate"><span class="pre">ContentTypeMiddleware</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api.services">api.services module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.services.CarHandler"><code class="docutils literal notranslate"><span class="pre">CarHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.services.JourneyHandler"><code class="docutils literal notranslate"><span class="pre">JourneyHandler</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api.validator">api.validator module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.validator.validate"><code class="docutils literal notranslate"><span class="pre">validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-api">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html">models package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Car-pooling service</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">application</a></li>
+      <li class="breadcrumb-item active">api package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-package">
+<h1>api package<a class="headerlink" href="#api-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-api.app">
+<span id="api-app-module"></span><h2>api.app module<a class="headerlink" href="#module-api.app" title="Link to this heading"></a></h2>
+<p>This module builds the Flask app from other components.</p>
+<p>The goal of this refactor was to create a more structured
+and modular application.
+The main application functions were separated into different
+independent modules and were generalized to provide higher
+level of reusability.</p>
+<p>The implementation also utilizes best practices
+(eg. independent logging and config handler module, input validation)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.app.bind_controller">
+<span class="sig-prename descclassname"><span class="pre">api.app.</span></span><span class="sig-name descname"><span class="pre">bind_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/app.html#bind_controller"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.app.bind_controller" title="Link to this definition"></a></dt>
+<dd><p>Forwards the controller binding to the inner method.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.app.bind_logger">
+<span class="sig-prename descclassname"><span class="pre">api.app.</span></span><span class="sig-name descname"><span class="pre">bind_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/app.html#bind_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.app.bind_logger" title="Link to this definition"></a></dt>
+<dd><p>Generates a logger based on the selected Config class.
+Then it used it as the Flask app default logger.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.app.bind_middlewares">
+<span class="sig-prename descclassname"><span class="pre">api.app.</span></span><span class="sig-name descname"><span class="pre">bind_middlewares</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/app.html#bind_middlewares"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.app.bind_middlewares" title="Link to this definition"></a></dt>
+<dd><p>Adds the content-type checker middleware to the app.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.app.create_app">
+<span class="sig-prename descclassname"><span class="pre">api.app.</span></span><span class="sig-name descname"><span class="pre">create_app</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/app.html#create_app"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.app.create_app" title="Link to this definition"></a></dt>
+<dd><p>Creates the base Flask app.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.app.get_app">
+<span class="sig-prename descclassname"><span class="pre">api.app.</span></span><span class="sig-name descname"><span class="pre">get_app</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/app.html#get_app"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.app.get_app" title="Link to this definition"></a></dt>
+<dd><p>Returns the created Flask app object.</p>
+</dd></dl>
+
+</section>
+<section id="module-api.controllers">
+<span id="api-controllers-module"></span><h2>api.controllers module<a class="headerlink" href="#module-api.controllers" title="Link to this heading"></a></h2>
+<p>The controller module contains the access points for the car-pooling API.
+I didn’t change the API structure described in the README.md, but generalized
+the common commands and implemented proper exception handling.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.controllers.bind_controllers">
+<span class="sig-prename descclassname"><span class="pre">api.controllers.</span></span><span class="sig-name descname"><span class="pre">bind_controllers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/controllers.html#bind_controllers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.controllers.bind_controllers" title="Link to this definition"></a></dt>
+<dd><p>This function is called by the app module to define the API endpoints.
+It returns the modified Flask app object.</p>
+<p>By creating the data transfer objects the automated data type and value
+validation of the parameters is executed (with cerberus).</p>
+<p>Flows different from the optimal execution are forwarded to the controller
+by raising specific Exceptions. The catching of them are separated by the
+HTTP status code to return.</p>
+<p>The additional 500 status code branch never should be called normally.
+If this status code still appear, the logs can provide further info
+about the bug.</p>
+</dd></dl>
+
+</section>
+<section id="module-api.decorators">
+<span id="api-decorators-module"></span><h2>api.decorators module<a class="headerlink" href="#module-api.decorators" title="Link to this heading"></a></h2>
+<p>Custom decorator to ensure the journeys is the waiting
+list is checked if the global car capacity is changed.</p>
+<p>The waiting list can be check before or after the
+decorated funcion.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.decorators.run_waiting_list_after">
+<span class="sig-prename descclassname"><span class="pre">api.decorators.</span></span><span class="sig-name descname"><span class="pre">run_waiting_list_after</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/decorators.html#run_waiting_list_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.decorators.run_waiting_list_after" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.decorators.run_waiting_list_before">
+<span class="sig-prename descclassname"><span class="pre">api.decorators.</span></span><span class="sig-name descname"><span class="pre">run_waiting_list_before</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/decorators.html#run_waiting_list_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.decorators.run_waiting_list_before" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-api.middlewares">
+<span id="api-middlewares-module"></span><h2>api.middlewares module<a class="headerlink" href="#module-api.middlewares" title="Link to this heading"></a></h2>
+<p>Content-type validating middleware.
+For each endpoint it checks the content-type of the request
+and returns 400 if it is not as registered in the __content_type_map.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.middlewares.ContentTypeMiddleware">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.middlewares.</span></span><span class="sig-name descname"><span class="pre">ContentTypeMiddleware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/middlewares.html#ContentTypeMiddleware"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.middlewares.ContentTypeMiddleware" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="api.middlewares.ContentTypeMiddleware.Logger">
+<span class="sig-name descname"><span class="pre">Logger</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#api.middlewares.ContentTypeMiddleware.Logger" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.services">
+<span id="api-services-module"></span><h2>api.services module<a class="headerlink" href="#module-api.services" title="Link to this heading"></a></h2>
+<p>The service handlers execute the logic to provide result for the controller.
+For this it uses the domain object properties and methods.</p>
+<p>The Car and Journey functons are separated to give the possibility to run
+the in separate services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="api.services.CarHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.services.</span></span><span class="sig-name descname"><span class="pre">CarHandler</span></span><a class="reference internal" href="_modules/api/services.html#CarHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.services.CarHandler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="api.services.CarHandler.register_cars">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register_cars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.services.CarHandler.register_cars" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="api.services.JourneyHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.services.</span></span><span class="sig-name descname"><span class="pre">JourneyHandler</span></span><a class="reference internal" href="_modules/api/services.html#JourneyHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.services.JourneyHandler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="api.services.JourneyHandler.dropoff">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dropoff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.services.JourneyHandler.dropoff" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.services.JourneyHandler.locate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">locate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locate_dto</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="models.html#models.dto.LocateDTO" title="models.dto.LocateDTO"><span class="pre">LocateDTO</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#models.data.Car" title="models.data.Car"><span class="pre">Car</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/api/services.html#JourneyHandler.locate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.services.JourneyHandler.locate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.services.JourneyHandler.register_journey">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register_journey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#api.services.JourneyHandler.register_journey" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-api.validator">
+<span id="api-validator-module"></span><h2>api.validator module<a class="headerlink" href="#module-api.validator" title="Link to this heading"></a></h2>
+<p>Data validator module to validate the parameters in the 
+data transfer objects.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="api.validator.validate">
+<span class="sig-prename descclassname"><span class="pre">api.validator.</span></span><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_object</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/validator.html#validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.validator.validate" title="Link to this definition"></a></dt>
+<dd><p>Receives a DTO and matches its properties with the validation schema.</p>
+</dd></dl>
+
+</section>
+<section id="module-api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-api" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="main module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mark Marton.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

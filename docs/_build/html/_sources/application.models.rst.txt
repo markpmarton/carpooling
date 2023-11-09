@@ -1,0 +1,45 @@
+application.models package
+==========================
+
+Submodules
+----------
+
+application.models.constants module
+-----------------------------------
+
+.. automodule:: application.models.constants
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.models.data module
+------------------------------
+
+.. automodule:: application.models.data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.models.dto module
+-----------------------------
+
+.. automodule:: application.models.dto
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.models.exceptions module
+------------------------------------
+
+.. automodule:: application.models.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: application.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

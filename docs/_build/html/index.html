@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Car-pooling service’s documentation! &mdash; Car-pooling service  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="application" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Car-pooling service
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">application</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Car-pooling service</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to Car-pooling service’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-car-pooling-service-s-documentation">
+<h1>Welcome to Car-pooling service’s documentation!<a class="headerlink" href="#welcome-to-car-pooling-service-s-documentation" title="Link to this heading"></a></h1>
+<p>The goal of this refactor was to create a more structured
+and modular application.
+The main application functions were separated into different
+independent modules and were generalized to provide higher
+level of reusability.</p>
+<p>The implementation also utilizes best practices
+(eg. independent logging and config handler module, input validation)</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html">api package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api.app">api.app module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.app.bind_controller"><code class="docutils literal notranslate"><span class="pre">bind_controller()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.app.bind_logger"><code class="docutils literal notranslate"><span class="pre">bind_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.app.bind_middlewares"><code class="docutils literal notranslate"><span class="pre">bind_middlewares()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.app.create_app"><code class="docutils literal notranslate"><span class="pre">create_app()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.app.get_app"><code class="docutils literal notranslate"><span class="pre">get_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api.controllers">api.controllers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.controllers.bind_controllers"><code class="docutils literal notranslate"><span class="pre">bind_controllers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api.decorators">api.decorators module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.decorators.run_waiting_list_after"><code class="docutils literal notranslate"><span class="pre">run_waiting_list_after()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.decorators.run_waiting_list_before"><code class="docutils literal notranslate"><span class="pre">run_waiting_list_before()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api.middlewares">api.middlewares module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.middlewares.ContentTypeMiddleware"><code class="docutils literal notranslate"><span class="pre">ContentTypeMiddleware</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#api.middlewares.ContentTypeMiddleware.Logger"><code class="docutils literal notranslate"><span class="pre">ContentTypeMiddleware.Logger</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api.services">api.services module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.services.CarHandler"><code class="docutils literal notranslate"><span class="pre">CarHandler</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#api.services.CarHandler.register_cars"><code class="docutils literal notranslate"><span class="pre">CarHandler.register_cars()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.services.JourneyHandler"><code class="docutils literal notranslate"><span class="pre">JourneyHandler</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="api.html#api.services.JourneyHandler.dropoff"><code class="docutils literal notranslate"><span class="pre">JourneyHandler.dropoff()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#api.services.JourneyHandler.locate"><code class="docutils literal notranslate"><span class="pre">JourneyHandler.locate()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="api.html#api.services.JourneyHandler.register_journey"><code class="docutils literal notranslate"><span class="pre">JourneyHandler.register_journey()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api.validator">api.validator module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api.html#api.validator.validate"><code class="docutils literal notranslate"><span class="pre">validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-api">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main.html#main.run_app"><code class="docutils literal notranslate"><span class="pre">run_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models.html">models package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models.constants">models.constants module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.constants.ExceptionMessages"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.CarAlreadyExists"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.CarAlreadyExists</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.CarForJourneyNotFound"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.CarForJourneyNotFound</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.CarNotFound"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.CarNotFound</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.InvalidNumberOfSeats"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.InvalidNumberOfSeats</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.JourneyIdAlreadyExists"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.JourneyIdAlreadyExists</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.JourneyNotFound"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.JourneyNotFound</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.ExceptionMessages.NumberOfPassangersInterval"><code class="docutils literal notranslate"><span class="pre">ExceptionMessages.NumberOfPassangersInterval</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.constants.StaticParams"><code class="docutils literal notranslate"><span class="pre">StaticParams</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.constants.StaticParams.MAX_SEAT_NUMBER"><code class="docutils literal notranslate"><span class="pre">StaticParams.MAX_SEAT_NUMBER</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models.data">models.data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.data.Car"><code class="docutils literal notranslate"><span class="pre">Car</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Car.get_car_by_id"><code class="docutils literal notranslate"><span class="pre">Car.get_car_by_id()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Car.get_car_by_seats"><code class="docutils literal notranslate"><span class="pre">Car.get_car_by_seats()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Car.lock_car_seats"><code class="docutils literal notranslate"><span class="pre">Car.lock_car_seats()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Car.release_car_seats"><code class="docutils literal notranslate"><span class="pre">Car.release_car_seats()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.data.Journey"><code class="docutils literal notranslate"><span class="pre">Journey</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Journey.get_journey_from_storage_by_id"><code class="docutils literal notranslate"><span class="pre">Journey.get_journey_from_storage_by_id()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Journey.get_journey_from_waiting_list_by_id"><code class="docutils literal notranslate"><span class="pre">Journey.get_journey_from_waiting_list_by_id()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Journey.remove_journey"><code class="docutils literal notranslate"><span class="pre">Journey.remove_journey()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.data.Journey.run_waiting_list"><code class="docutils literal notranslate"><span class="pre">Journey.run_waiting_list()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models.dto">models.dto module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.BaseDTO"><code class="docutils literal notranslate"><span class="pre">BaseDTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.DropOffDTO"><code class="docutils literal notranslate"><span class="pre">DropOffDTO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.DropOffDTO.ID"><code class="docutils literal notranslate"><span class="pre">DropOffDTO.ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.DropOffDTO.validation_schema"><code class="docutils literal notranslate"><span class="pre">DropOffDTO.validation_schema</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.LocateDTO"><code class="docutils literal notranslate"><span class="pre">LocateDTO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.LocateDTO.ID"><code class="docutils literal notranslate"><span class="pre">LocateDTO.ID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.LocateDTO.validation_schema"><code class="docutils literal notranslate"><span class="pre">LocateDTO.validation_schema</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.LocateResponseDTO"><code class="docutils literal notranslate"><span class="pre">LocateResponseDTO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.LocateResponseDTO.id"><code class="docutils literal notranslate"><span class="pre">LocateResponseDTO.id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.LocateResponseDTO.seats"><code class="docutils literal notranslate"><span class="pre">LocateResponseDTO.seats</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.LocateResponseDTO.validation_schema"><code class="docutils literal notranslate"><span class="pre">LocateResponseDTO.validation_schema</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.RegisterCarItemDTO"><code class="docutils literal notranslate"><span class="pre">RegisterCarItemDTO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterCarItemDTO.id"><code class="docutils literal notranslate"><span class="pre">RegisterCarItemDTO.id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterCarItemDTO.seats"><code class="docutils literal notranslate"><span class="pre">RegisterCarItemDTO.seats</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterCarItemDTO.validation_schema"><code class="docutils literal notranslate"><span class="pre">RegisterCarItemDTO.validation_schema</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.RegisterCarsDTO"><code class="docutils literal notranslate"><span class="pre">RegisterCarsDTO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterCarsDTO.data"><code class="docutils literal notranslate"><span class="pre">RegisterCarsDTO.data</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.dto.RegisterJourneyDTO"><code class="docutils literal notranslate"><span class="pre">RegisterJourneyDTO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterJourneyDTO.id"><code class="docutils literal notranslate"><span class="pre">RegisterJourneyDTO.id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterJourneyDTO.people"><code class="docutils literal notranslate"><span class="pre">RegisterJourneyDTO.people</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="models.html#models.dto.RegisterJourneyDTO.validation_schema"><code class="docutils literal notranslate"><span class="pre">RegisterJourneyDTO.validation_schema</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models.exceptions">models.exceptions module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.BaseException"><code class="docutils literal notranslate"><span class="pre">BaseException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.CarNotFoundException"><code class="docutils literal notranslate"><span class="pre">CarNotFoundException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.DataValidatorException"><code class="docutils literal notranslate"><span class="pre">DataValidatorException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.DomainObjectAlreadyRegisteredException"><code class="docutils literal notranslate"><span class="pre">DomainObjectAlreadyRegisteredException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.EmptyCarListException"><code class="docutils literal notranslate"><span class="pre">EmptyCarListException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.InvalidCarSeatsParameterException"><code class="docutils literal notranslate"><span class="pre">InvalidCarSeatsParameterException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.InvalidPassangerNumberParameterException"><code class="docutils literal notranslate"><span class="pre">InvalidPassangerNumberParameterException</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#models.exceptions.JourneyNotFoundException"><code class="docutils literal notranslate"><span class="pre">JourneyNotFoundException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#module-models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.test_acceptance">tests.test_acceptance module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_acceptance.test_acceptance"><code class="docutils literal notranslate"><span class="pre">test_acceptance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.test_additional">tests.test_additional module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_empty_list"><code class="docutils literal notranslate"><span class="pre">test_car_registration_empty_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_invalid_seat_number1"><code class="docutils literal notranslate"><span class="pre">test_car_registration_invalid_seat_number1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_invalid_seat_number10"><code class="docutils literal notranslate"><span class="pre">test_car_registration_invalid_seat_number10()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_invalid_seat_number3"><code class="docutils literal notranslate"><span class="pre">test_car_registration_invalid_seat_number3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_invalid_type_id"><code class="docutils literal notranslate"><span class="pre">test_car_registration_invalid_type_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_invalid_type_seats"><code class="docutils literal notranslate"><span class="pre">test_car_registration_invalid_type_seats()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_missing_id"><code class="docutils literal notranslate"><span class="pre">test_car_registration_missing_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_missing_seats"><code class="docutils literal notranslate"><span class="pre">test_car_registration_missing_seats()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_unexpected_parameter"><code class="docutils literal notranslate"><span class="pre">test_car_registration_unexpected_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_car_registration_valid_input"><code class="docutils literal notranslate"><span class="pre">test_car_registration_valid_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_dropoff_missing_id"><code class="docutils literal notranslate"><span class="pre">test_dropoff_missing_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_dropoff_no_id_found"><code class="docutils literal notranslate"><span class="pre">test_dropoff_no_id_found()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_dropoff_no_journey_found"><code class="docutils literal notranslate"><span class="pre">test_dropoff_no_journey_found()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_dropoff_valid_input"><code class="docutils literal notranslate"><span class="pre">test_dropoff_valid_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_journey_registration_invalid_type_id"><code class="docutils literal notranslate"><span class="pre">test_journey_registration_invalid_type_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_journey_registration_invalid_type_people"><code class="docutils literal notranslate"><span class="pre">test_journey_registration_invalid_type_people()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_journey_registration_invalid_unexpected_parameter"><code class="docutils literal notranslate"><span class="pre">test_journey_registration_invalid_unexpected_parameter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_journey_registration_missing_id"><code class="docutils literal notranslate"><span class="pre">test_journey_registration_missing_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_journey_registration_missing_people"><code class="docutils literal notranslate"><span class="pre">test_journey_registration_missing_people()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_journey_registration_valid_input"><code class="docutils literal notranslate"><span class="pre">test_journey_registration_valid_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_locate_existing_journey_no_car"><code class="docutils literal notranslate"><span class="pre">test_locate_existing_journey_no_car()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_locate_existing_journey_with_car"><code class="docutils literal notranslate"><span class="pre">test_locate_existing_journey_with_car()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_locate_missing_id"><code class="docutils literal notranslate"><span class="pre">test_locate_missing_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_locate_missing_journey"><code class="docutils literal notranslate"><span class="pre">test_locate_missing_journey()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_additional.test_status"><code class="docutils literal notranslate"><span class="pre">test_status()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.test_base">tests.test_base module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.html#tests.test_base.run_api_server"><code class="docutils literal notranslate"><span class="pre">run_api_server()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="utils.config_manager.html">utils.config_manager package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="utils.config_manager.html#submodules">Submodules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="utils.config_manager.html#module-utils.config_manager.config">utils.config_manager.config module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.ConfigFactory"><code class="docutils literal notranslate"><span class="pre">ConfigFactory</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.ConfigFactory.create_config"><code class="docutils literal notranslate"><span class="pre">ConfigFactory.create_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.ConfigType"><code class="docutils literal notranslate"><span class="pre">ConfigType</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.ConfigType.Development"><code class="docutils literal notranslate"><span class="pre">ConfigType.Development</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.ConfigType.Production"><code class="docutils literal notranslate"><span class="pre">ConfigType.Production</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.ConfigType.Testing"><code class="docutils literal notranslate"><span class="pre">ConfigType.Testing</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.create_config"><code class="docutils literal notranslate"><span class="pre">create_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.config.get_config_class_full_namespace"><code class="docutils literal notranslate"><span class="pre">get_config_class_full_namespace()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="utils.config_manager.html#module-utils.config_manager.exceptions">utils.config_manager.exceptions module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.exceptions.BaseException"><code class="docutils literal notranslate"><span class="pre">BaseException</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.exceptions.InvalidConfigTypeException"><code class="docutils literal notranslate"><span class="pre">InvalidConfigTypeException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="utils.config_manager.html#module-utils.config_manager.types">utils.config_manager.types module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig"><code class="docutils literal notranslate"><span class="pre">BaseConfig</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.DEBUG"><code class="docutils literal notranslate"><span class="pre">BaseConfig.DEBUG</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.HOST"><code class="docutils literal notranslate"><span class="pre">BaseConfig.HOST</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.LOG_FILE"><code class="docutils literal notranslate"><span class="pre">BaseConfig.LOG_FILE</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.LOG_LEVEL"><code class="docutils literal notranslate"><span class="pre">BaseConfig.LOG_LEVEL</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.LOG_WORKING_DIR"><code class="docutils literal notranslate"><span class="pre">BaseConfig.LOG_WORKING_DIR</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.PORT"><code class="docutils literal notranslate"><span class="pre">BaseConfig.PORT</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.BaseConfig.TESTING"><code class="docutils literal notranslate"><span class="pre">BaseConfig.TESTING</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.DevelopmentConfig"><code class="docutils literal notranslate"><span class="pre">DevelopmentConfig</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.DevelopmentConfig.DEBUG"><code class="docutils literal notranslate"><span class="pre">DevelopmentConfig.DEBUG</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.DevelopmentConfig.LOG_FILE"><code class="docutils literal notranslate"><span class="pre">DevelopmentConfig.LOG_FILE</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.DevelopmentConfig.LOG_LEVEL"><code class="docutils literal notranslate"><span class="pre">DevelopmentConfig.LOG_LEVEL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.ProductionConfig"><code class="docutils literal notranslate"><span class="pre">ProductionConfig</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.ProductionConfig.LOG_FILE"><code class="docutils literal notranslate"><span class="pre">ProductionConfig.LOG_FILE</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.ProductionConfig.LOG_LEVEL"><code class="docutils literal notranslate"><span class="pre">ProductionConfig.LOG_LEVEL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.TestingConfig"><code class="docutils literal notranslate"><span class="pre">TestingConfig</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.TestingConfig.LOG_FILE"><code class="docutils literal notranslate"><span class="pre">TestingConfig.LOG_FILE</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.TestingConfig.LOG_LEVEL"><code class="docutils literal notranslate"><span class="pre">TestingConfig.LOG_LEVEL</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.TestingConfig.TESTING"><code class="docutils literal notranslate"><span class="pre">TestingConfig.TESTING</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="utils.config_manager.html#utils.config_manager.types.TestingConfig.WTF_CSRF_ENABLED"><code class="docutils literal notranslate"><span class="pre">TestingConfig.WTF_CSRF_ENABLED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="utils.config_manager.html#module-utils.config_manager">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="utils.logger.html">utils.logger package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="utils.logger.html#submodules">Submodules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="utils.logger.html#module-utils.logger.log">utils.logger.log module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="utils.logger.html#utils.logger.log.LoggerFactory"><code class="docutils literal notranslate"><span class="pre">LoggerFactory</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="utils.logger.html#utils.logger.log.LoggerFactory.get_logger"><code class="docutils literal notranslate"><span class="pre">LoggerFactory.get_logger()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="utils.logger.html#module-utils.logger">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="utils.request_mapper.html">utils.request_mapper package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="utils.request_mapper.html#submodules">Submodules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="utils.request_mapper.html#module-utils.request_mapper.exceptions">utils.request_mapper.exceptions module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="utils.request_mapper.html#utils.request_mapper.exceptions.BaseException"><code class="docutils literal notranslate"><span class="pre">BaseException</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="utils.request_mapper.html#utils.request_mapper.exceptions.JsonMappingException"><code class="docutils literal notranslate"><span class="pre">JsonMappingException</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="utils.request_mapper.html#utils.request_mapper.exceptions.RequestMappingException"><code class="docutils literal notranslate"><span class="pre">RequestMappingException</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="utils.request_mapper.html#utils.request_mapper.exceptions.UnhandledContentTypeMappingException"><code class="docutils literal notranslate"><span class="pre">UnhandledContentTypeMappingException</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="utils.request_mapper.html#module-utils.request_mapper.mapper">utils.request_mapper.mapper module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="utils.request_mapper.html#utils.request_mapper.mapper.map_request"><code class="docutils literal notranslate"><span class="pre">map_request()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="utils.request_mapper.html#module-utils.request_mapper">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#module-utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-right" title="application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Mark Marton.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

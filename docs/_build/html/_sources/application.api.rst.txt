@@ -1,0 +1,61 @@
+application.api package
+=======================
+
+Submodules
+----------
+
+application.api.app module
+--------------------------
+
+.. automodule:: application.api.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.api.controllers module
+----------------------------------
+
+.. automodule:: application.api.controllers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.api.decorators module
+---------------------------------
+
+.. automodule:: application.api.decorators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.api.middlewares module
+----------------------------------
+
+.. automodule:: application.api.middlewares
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.api.services module
+-------------------------------
+
+.. automodule:: application.api.services
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+application.api.validator module
+--------------------------------
+
+.. automodule:: application.api.validator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: application.api
+   :members:
+   :undoc-members:
+   :show-inheritance:
